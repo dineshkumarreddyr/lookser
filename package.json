@@ -1,0 +1,27 @@
+{
+  "name": "Lookser",
+  "version": "1.0.0",
+  "description": "Affliate marketing for fashion products",
+  "main": "lsApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dineshkumarreddyr/lookser.git"
+  },
+  "keywords": [
+    "Lookser",
+    "Fashion"
+  ],
+  "author": "Dinesh Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dineshkumarreddyr/lookser/issues"
+  },
+  "homepage": "https://github.com/dineshkumarreddyr/lookser",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "gulp": "^3.9.0"
+  }
+}
