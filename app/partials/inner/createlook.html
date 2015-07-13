@@ -1,0 +1,262 @@
+<div class="slideshow">
+                <div id="slideshow" class="carousel slide carousel-fade" data-ride="carousel"
+                     data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="app/assets/images/look.jpg" alt="First Slide">
+                        </div><!-- /. Item Active -->
+                    </div><!-- /. Carousel-Inner -->
+                </div><!-- /# Slideshow .Carousel -->
+            </div><!-- /. Slideshow -->
+        <!-- /. Container -->
+    <!-- /# Mastehead -->
+    <!--slider ends-->
+    <!-- create look -->
+    <div class="container createlook-main">
+        <h2>create a look</h2>
+        <div class="filter-bar">
+            <div class="row">
+                <div class="col-md-2">
+                    <select class="minimal">
+                        <option value="">By Gender</option>
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="minimal">
+                        <option value="">By Category</option>
+                        <option value="">Shirts</option>
+                        <option value="">T-Shirts</option>
+                        <option value="">Jeans</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="minimal">
+                        <option value="">By Provider</option>
+                        <option value="">Flipkart</option>
+                        <option value="">Jabong</option>
+                        <option value="">Yepme</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="minimal">
+                        <option value="">By Brand</option>
+                        <option value="">Lee</option>
+                        <option value="">Lee Cooper</option>
+                        <option value="">United Colors of Benetton</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7 createlook-left">
+                <p><strong>{{selectedProducts.length}}</strong> Products added to the look</p>
+                <div class="prodsadded">
+                    <ul>
+                        <li ng-repeat="selectedProd in selectedProducts">
+                            <a href="#" target="_blank">
+                                <img src="{{selectedProd.imgUrl}}"
+                                     class="img-responsive">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="clearfix selectedprod-wrap">
+                    <div class="selectedprod-each" ng-repeat="selectedProd in selectedProducts">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="looklist-number">{{$index+1}}</div>
+                            </div>
+                            <div class="col-md-10 prodpick-details">
+                                <div class="row">
+                                    <h3>{{selectedProd.productName}}</h3>
+                                    <div class="col-md-7 prodpick-left">
+                                        <div class="provider"><img src="{{selectedProd.providerLogo}}"></div>
+                                    </div>
+                                    <div class="col-md-3 prodpick-right">
+                                        <div class="cost">Rs. {{selectedProd.discountCost}}</div>
+                                    </div>
+                                    <div class="col-md-2 no-pad removeadded">
+                                        <a href ng-click="removeProd(selectedProd)">Remove <img src="app/assets/images/removeadded.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="totaladded">
+                        <div class="row">
+                            <div class="col-md-8 text-right"><strong>Total</strong></div>
+                            <div class="col-md-4 no-pad">Rs.11111</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <p>Showing <strong>1200</strong> Results </p>
+                <div class="createlook-right">
+                    <!--list one-->
+                    <div class="clearfix createlook-list" ng-repeat="product in createlookProducts">
+                        <div class="col-md-3">
+                            <div class="looklist-image">
+                                <img src="{{product.imgUrl}}" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-md-9 prodpick-details">
+                            <div class="row">
+                                <h3>{{product.productName}}</h3>
+                                <div class="col-md-5 prodpick-left">
+                                    <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                    <div class="provider"><img src="{{product.providerLogo}}"></div>
+                                    <div class="brand"><span>Brand</span><br>Jabong</div>
+                                </div>
+                                <div class="col-md-7 prodpick-right">
+                                    <div class="mrp"><span>MRP: Rs</span> {{product.actualCost}}</div>
+                                    <div class="cost">Rs. {{product.discountCost}}</div>
+                                    <div class="addtolook">
+                                        <a href ng-click="addToLook(product,$event)">Add to look <img src="app/assets/images/addlook.png"></a>
+                                    </div>
+                                    <div class="fav">
+                                        <a href="#"><img src="app/assets/images/fav.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix createlook-list">
+                        <div class="col-md-3">
+                            <div class="looklist-image">
+                                <img src="app/assets/images/trending/t7.jpg" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-md-9 prodpick-details">
+                            <div class="row">
+                                <h3>Irresistable Black Casual Wear</h3>
+                                <div class="col-md-5 prodpick-left">
+                                    <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                    <div class="provider"><img src="app/assets/images/jabong.png"></div>
+                                    <div class="brand"><span>Brand</span><br>Jabong</div>
+                                </div>
+                                <div class="col-md-7 prodpick-right">
+                                    <div class="mrp"><span>MRP: Rs</span> 123</div>
+                                    <div class="cost">Rs. 103</div>
+                                    <div class="addtolook">
+                                        <a href="#">Add to look <img src="app/assets/images/addlook.png"></a>
+                                    </div>
+                                    <div class="fav">
+                                        <a href="#"><img src="app/assets/images/fav.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--create look end-->
+    <!--top designers carousel-->
+    <div class="carousel-designers">
+        <div class="container text-center">
+            <div class="carousel-head"><a href="#">top designers</a></div>
+            <div class="row">
+                <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count girl">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Rishab Gupta</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+23</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Ashitha Rao</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>James Duke</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count girl">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Rajesh Varma</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="item">
+                            <ul>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count girl">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Rishab Gupta</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+23</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Ashitha Rao</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>James Duke</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="designer">
+                                        <div class="count girl">02</div>
+                                        <img src="app/assets/images/d3.jpg" class="img-circle">
+                                        <h3>Rajesh Varma</h3>
+                                        <div class="rating"><img src="app/assets/images/rating.png"></div>
+                                        <h4><strong>+50</strong> Looks Created</h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                        <img src="app/assets/images/left.png" width="20">
+                    </a>
+                    <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                        <img src="app/assets/images/right.png" width="20">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top designers carousel-->

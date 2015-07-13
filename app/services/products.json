@@ -1,0 +1,104 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "category": "Shirts",
+            "provider": "Myntra",
+            "imgUrl": "../../app/assets/images/trending/t1.jpg",
+            "providerLogo": "../../assets/images/jabong.png",            
+            "actualCost": "2300",
+            "discountCost": "2000",
+            "productName": "CLASSIC CHICK LOOK"
+        },
+        {
+           "id": 2,
+           "category": "Shirts",
+           "provider": "Myntra",
+           "imgUrl": "../../app/assets/images/trending/t2.jpg",
+           "providerLogo": "../../assets/images/jabong.png",
+           "actualCost": "2300",
+           "discountCost": "2000",
+           "productName": "CLASSIC CHICK LOOK"
+       },
+       {
+        "id": 3,
+        "category": "Sports Wear",
+        "provider": "Flipkart",
+        "imgUrl": "../../app/assets/images/trending/t3.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 4,
+        "category": "Sports Wear",
+        "provider": "Flipkart",
+        "imgUrl": "../../app/assets/images/trending/t4.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 5,
+        "category": "Sports Wear",
+        "provider": "Flipkart",
+        "imgUrl": "../../app/assets/images/trending/t5.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 6,
+        "category": "Shirts",
+        "provider": "Jabong",
+        "imgUrl": "../../app/assets/images/trending/t6.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 7,
+        "category": "Shirts",
+        "provider": "Jabong",
+        "imgUrl": "../../app/assets/images/trending/t7.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 8,
+        "category": "Shirts",
+        "provider": "Yepme",
+        "imgUrl": "../../app/assets/images/trending/t8.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 9,
+        "category": "t-Shirts",
+        "provider": "Yepme",
+        "imgUrl": "../../app/assets/images/trending/t1.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    },
+    {
+        "id": 10,
+        "category": "t-Shirts",
+        "provider": "Fashionara",
+        "imgUrl": "../../app/assets/images/trending/t2.jpg",
+        "providerLogo": "../../assets/images/jabong.png",
+        "actualCost": "2300",
+        "discountCost": "2000",
+        "productName": "CLASSIC CHICK LOOK"
+    }
+    ]
+}

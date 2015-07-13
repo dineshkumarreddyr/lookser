@@ -1,0 +1,288 @@
+<div id="masterhead">
+		<div class="container-fluid no-pad">
+		 <div class="menu-main">
+		<nav class="navbar">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#"><img src="app/assets/images/logo.png" alt="logo"></a>
+			</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="#">get the look <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">shop</a></li>
+			<li><a href="#">top offers</a></li>
+			<li><a href="#">how it works</a></li>
+			<li><a href="#">blog</a></li>
+			<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control menu-search" placeholder="Search">
+			</div>
+		  </form>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	</div>
+		
+		<div class="slideshow">
+		<div id="slideshow" class="carousel slide carousel-fade" data-ride="carousel" 
+		data-interval="3000">
+		<div class="carousel-inner">
+		<div class="item active">
+		<img class="img-responsive" src="app/assets/images/listing.jpg" alt="First Slide">
+		</div><!-- /. Item Active -->
+		</div><!-- /. Carousel-Inner -->
+		</div><!-- /# Slideshow .Carousel -->
+		</div><!-- /. Slideshow -->
+		</div><!-- /. Container -->
+		</div><!-- /# Mastehead -->  
+	<!--slider ends-->
+		
+	<div class="filters-top-wrap">
+	  <div class="container">
+	      <div class="row">
+		    <div class="col-md-5"><input type="text" name="search" id="search" tabindex="1"
+			class="form-control" placeholder="Search by Product, Look and Designer" value=""></div>
+			<div class="col-md-2">
+             <div class="dropdown dropdown-dark">
+				<select name="gender" class="dropdown-select">
+				  <option value="">Gender</option>
+				  <option value="male">Male</option>
+				  <option value="female">Female</option>
+				</select>
+			   </div>
+			 </div>
+			 
+			<div class="col-md-3">
+			  <div class="dropdown dropdown-dark">
+				<select name="category" class="dropdown-select">
+				  <option value="">Category</option>
+				  <option value="Marriage">Marriage</option>
+				  <option value="Party Wear">Party Wear</option>
+				  <option value="Casual Wear">Casual Wear</option>
+				</select>
+				</div>
+			  </div>
+			<div class="col-md-2"><button>Search</button></div>
+		  </div>
+		 </div> 
+	</div>
+	
+	<!-- filtered products -->
+	<h2>Products</h2>
+	<div class="container products-wrap">
+	 <div class="row">
+	 <div class="col-md-3 filters-left"> 
+	   <h4>by Categories</h4>
+	   <ul>
+        <li ng-repeat="producttype in products | unique:'category'">
+            <input id='{{producttype.id}}' type='checkbox' ng-click="filterFun(producttype.category,'category')" />
+            <label for='{{producttype.id}}'>
+                <span></span>{{producttype.category}}
+                <ins><i>{{producttype.category}}</i></ins>
+            </label>
+        </li>
+		</ul>
+		
+	   <div class="clearfix">&nbsp;</div>
+	   <h4>By Provider</h4>
+	   <ul>
+        <li ng-repeat="product in products | unique:'provider'">
+            <input id='{{product.provider}}' type='checkbox' ng-click="filterFun(product.provider,'provider')" />
+            <label for='{{product.provider}}'>
+                <span></span>{{product.provider}}
+                <ins><i>{{product.provider}}</i></ins>
+            </label>
+        </li>
+		</ul>
+		
+	 <div id="budget-wrapper">
+	   <h4>Budget <input type="text" id="slider-display" name="slider-display" value="0" /></h4>
+	   <div id="slider"></div>
+	 </div>
+	 
+	 <div class="clearfix">&nbsp;</div>
+	 <h4>by Color &nbsp;<select name="colorpicker-picker-longlist">
+	  <option value="#ac725e">#ac725e</option>
+	  <option value="#d06b64">#d06b64</option>
+	  <option value="#f83a22">#f83a22</option>
+	  <option value="#fa573c">#fa573c</option>
+	  <option value="#ff7537">#ff7537</option>
+	  <option value="#ffad46">#ffad46</option>
+	  <option value="#42d692">#42d692</option>
+	  <option value="#16a765">#16a765</option>
+	  <option value="#7bd148">#7bd148</option>
+	  <option value="#b3dc6c">#b3dc6c</option>
+	  <option value="#fbe983">#fbe983</option>
+	  <option value="#fad165">#fad165</option>
+	  <option value="#92e1c0">#92e1c0</option>
+	  <option value="#9fe1e7">#9fe1e7</option>
+	  <option value="#9fc6e7">#9fc6e7</option>
+	  <option value="#4986e7">#4986e7</option>
+	  <option value="#9a9cff">#9a9cff</option>
+	  <option value="#b99aff">#b99aff</option>
+	  <option value="#c2c2c2">#c2c2c2</option>
+	  <option value="#cabdbf">#cabdbf</option>
+	  <option value="#cca6ac">#cca6ac</option>
+	  <option value="#f691b2">#f691b2</option>
+	  <option value="#cd74e6">#cd74e6</option>
+	  <option value="#a47ae2">#a47ae2</option>
+	</select></h4>
+	 
+	 
+	  <div class="clearfix">&nbsp;</div>
+	  <h4>Size</h4>
+	  <div class="sizes clearfix">
+	  <input type="radio" name="size" id="small" value="small" checked="checked" /> 
+      <label for="small">S</label>
+      <input type="radio" name="size" id="medium" value="medium" />     
+      <label for="medium">M</label>
+      <input type="radio" name="size" id="large" value="large" />     
+      <label for="large">L</label>
+      <input type="radio" name="size" id="xlarge" value="xlarge" />     
+      <label for="xlarge">XL</label>
+	  <input type="radio" name="size" id="xxlarge" value="xxlarge" />     
+      <label for="xlarge">XXL</label>
+	  </div>
+	 </div>
+	 <!--filters left end-->
+	 
+    <div class="col-md-9">
+        <div class="col-md-3 trend-each" ng-repeat="product in contentAllItems">
+            <div class="listimg">
+                <img ng-src="{{product.imgUrl}}" class="img-responsive">
+            </div>
+            <h4>{{product.productName}}</h4>
+            <div class="col-md-12 text-center">
+                <span class="mrp">{{product.actualCost}}</span>
+                <span class="aftrdsnt">{{product.discountCost}}</span>
+            </div>
+        </div>      
+   </div>
+   </div>
+   </div>
+	<!-- trending products -->
+	
+	
+	<!--top designers carousel-->
+	<div class="carousel-designers">
+		<div class="container text-center">
+		<div class="carousel-head"><a href="#">top designers</a></div>
+			<div class="row">
+				<div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+						  <ul>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count girl">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Rishab Gupta</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+23</strong> Looks Created</h4>
+							  </div>
+							</li>
+							 <li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Ashitha Rao</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>James Duke</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count girl">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Rajesh Varma</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							</ul>
+						</div>
+						
+						<div class="item">
+											  <ul>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count girl">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Rishab Gupta</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+23</strong> Looks Created</h4>
+							  </div>
+							</li>
+							 <li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Ashitha Rao</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>James Duke</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							<li class="col-md-3 col-sm-6">
+							   <div class="designer">
+								<div class="count girl">02</div>
+								<img src="app/assets/images/d3.jpg" class="img-circle">
+								<h3>Rajesh Varma</h3>
+								<div class="rating"><img src="app/assets/images/rating.png"></div>
+								<h4><strong>+50</strong> Looks Created</h4>
+							  </div>
+							</li>
+							</ul>
+						</div>                   
+					</div>
+					<a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+						<img src="app/assets/images/left.png" width="20">
+					</a>
+					<a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+						<img src="app/assets/images/right.png" width="20">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--top designers carousel-->
+	<script>
+	$(document).ready(function() {
+		$('select[name="colorpicker-longlist"]').simplecolorpicker();
+		$('select[name="colorpicker-picker-longlist"]').simplecolorpicker({picker: true, theme: 'glyphicons'});
+
+	  $('#destroy').on('click', function() {
+		$('select').simplecolorpicker('destroy');
+	  });
+	  $('#Carousel').carousel({
+			interval: 5000
+		});
+	});
+	</script>

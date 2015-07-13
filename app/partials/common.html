@@ -1,7 +1,266 @@
-<header>
-	Header content goes here
-</header>
-<div ui-view></div>
-<footer>
-	Footer zone goes here
-</footer>
+<!--signin modal starts-->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-wrap">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="app/assets/images/close.png">
+                    </span>
+                </button>
+            </div>
+            <div class="col-md-6 login-main">
+                <h2>Login In</h2>
+                <form accept-charset="" action="" class="" method="">
+                    <div class='row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>E-mail ID</label>
+                            <input class='form-control' type='text'>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Password</label>
+                            <input class='form-control' type="password">
+                        </div>
+                    </div>
+                    <div class='col-xs-12 form-group'>
+                        <button class="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6 signup-main">
+                <h2>No Account yet? Register.</h2>
+                <form accept-charset="" action="" class="" method="">
+                    <div class='row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Full Name</label>
+                            <input class='form-control' type='text'>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>E-mail ID</label>
+                            <input class='form-control' type='text'>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Password</label>
+                            <input class='form-control' type="password">
+                        </div>
+                    </div>
+                    <div class='col-xs-12 form-group'>
+                        <button class="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- signin modal ends-->
+<!-- head top starts-->
+<div class="container-fluid head-top">
+    <div class="container">
+        <div class="col-md-6 head-left no-pad">
+            <ul>
+                <!-- <li>(855) 255 - 5011</li>-->
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right top-menu">
+                        <li><a href="#" data-toggle="modal" data-target="#LoginModal">Login</a></li>
+                        <li>
+                            <div class="ui-group-buttons">
+                                <button type="button" class="btn userbtn btn-xs" data-toggle="modal"
+                                        data-target="#LoginModal">
+                                    Signup As User
+                                </button>
+                                <div class="or or-xs"></div>
+                                <button type="button" class="btn desbtn btn-xs" data-toggle="modal"
+                                        data-target="#LoginModal">
+                                    Signup As Designer
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- /.navbar-collapse -->
+
+    </div>
+</div>
+
+<!--head top end-->
+<!-- slider starts -->
+<div id="masterhead">
+    <div class="container-fluid no-pad">
+        <div class="menu-main">
+            <nav class="navbar">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="app/assets/images/logo.png" alt="logo"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">get the look <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">shop</a></li>
+                            <li><a href="#">top offers</a></li>
+                            <li><a href="#">how it works</a></li>
+                            <li><a href="#">blog</a></li>
+                            <form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control menu-search" placeholder="Search">
+                                </div>
+                            </form>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <ui-view></ui-view>
+        <!--ecom-->
+        <div class="container-fluid">
+            <div class="container ecom-main">
+                <div class="col-md-12">
+                    <div id="Carousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#Carousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/flipkart.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/myntra.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/yepme.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/fashinara.png" alt="Image" style="max-width:100%;"></a></div>
+                                </div><!--.row-->
+                            </div><!--.item-->
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/snapdeal.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/paytm.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/jabong.png" alt="Image" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#"><img src="app/assets/images/shopclues.png" alt="Image" style="max-width:100%;"></a></div>
+                                </div><!--.row-->
+                            </div><!--.item-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ecom-->
+
+
+        <div class="clearfix"></div>
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-7 col-sm-7 footer-left">
+                    <div class="col-md-3">
+                        <div class="footer-list">
+                            <h3>COMPANY</h3>
+                            <ul>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="javascript:;">ASTROLOGY</a></li>
+                                <li><a href="javascript:;">YOGA</a></li>
+                                <li><a href="javascript:;">IMMEDIATE HELP</a></li>
+                                <li><a href="javascript:;">VIDEOS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-list">
+                            <h3>WEBSITE</h3>
+                            <ul>
+                                <li><a href="index.html">ABOUT US</a></li>
+                                <li><a href="javascript:;">CORPORATE</a></li>
+                                <li><a href="javascript:;">WISH LIST</a></li>
+                                <li><a href="javascript:;">ORDER TRACKING</a></li>
+                                <li><a href="javascript:;">CAREERS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-list">
+                            <h3>POLICIES</h3>
+                            <ul>
+                                <li><a href="index.html">PRIVACY POLICY</a></li>
+                                <li><a href="javascript:;">TERMS & CONDITIONS	</a></li>
+                                <li><a href="javascript:;">DELIVERY POLICY</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-list">
+                            <h3>HELP</h3>
+                            <ul>
+                                <li><a href="index.html">SUPPORT</a></li>
+                                <li><a href="javascript:;">855.255.2011</a></li>
+                                <li><a href="mailto:info@cosmicweb.com?Subject=Hello%20again" target="_top">info@cosmicweb.com</a></li>
+                                <li><a href="javascript:;">LIST YOUR SPACE</a></li>
+                                <li><a href="javascript:;">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 col-sm-5 social">
+                    <h3>CONNECT ONLINE</h3>
+                    <ul>
+                        <li><a href="javascript:;"><img src="app/assets/images/fb1.png" width="10" alt="social icons"></a></li>
+                        <li><a href="javascript:;"><img src="app/assets/images/ftw.png" alt="social icons"></a></li>
+                        <li><a href="javascript:;"><img src="app/assets/images/gplus.png" alt="social icons"></a></li>
+                        <li><a href="javascript:;"><img src="app/assets/images/yt.png" alt="social icons"></a></li>
+                        <li><a href="javascript:;"><img src="app/assets/images/sc.png" alt="social icons"></a></li>
+                        <li><a href="javascript:;"><img src="app/assets/images/fl.png" alt="social icons"></a></li>
+                    </ul>
+                    <h3>JOIN OUR MAILING LIST TO RECIEVE UPDATES</h3>
+                    <form action="#">
+                        <div class="input-group ">
+                            <input class="btn btn-lg" name="email" id="email" type="email" placeholder="" required>
+                            <button class="btn btn-info btn-lg" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--end of footer-->
+
+        <div class="copy">
+            <div class="container">
+                <div class="col-md-7">&copy; 2015 Fashionoo | ALL RIGHTS RESERVED</div>
+                <div class="col-md-5 icons">
+                    <ul>
+                        <li><a href="#"><img src="app/assets/images/tw.png"></a></li>
+                        <li><a href="#"><img src="app/assets/images/tw.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
